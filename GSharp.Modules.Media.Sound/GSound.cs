@@ -13,6 +13,41 @@ namespace GSharp.Modules.Media.Sound
             EngineBASS.Initialize(IntPtr.Zero);
         }
 
+        [GCommand("재생 위치")]
+        public static double Position
+        {
+            get
+            {
+                return EngineBASS.Position;
+            }
+        }
+
+        [GCommand("문자식 재생 위치")]
+        public static string FormattedPosition
+        {
+            get
+            {
+                return EngineBASS.FormattedPosition;
+            }
+        }
+
+        [GCommand("재생 길이")]
+        public static double Length
+        {
+            get {
+                return EngineBASS.Length;
+            }
+        }
+
+        [GCommand("문자식 재생 길이")]
+        public static string FormattedLength
+        {
+            get
+            {
+                return EngineBASS.FormattedLength;
+            }
+        }
+
         [GCommand("{object}파일 재생")]
         public static void Play(string path)
         {
