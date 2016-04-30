@@ -11,6 +11,10 @@ GSharp에서 사용할 수 있는 기본 확장 모듈입니다.
 시간과 관련된 프로그래밍을 제공합니다.  
 본 모듈을 통해 현재 시간을 가져오거나 타이머등의 이벤트를 사용할 수 있습니다.
 
+#### [GSharp.Modules.System.Dialog](GSharp.Modules.System.Dialog)
+시스템 대화 상자와 관련된 프로그래밍을 제공합니다.  
+본 모듈을 통해 파일 또는 폴더를 선택하는 대화 상자를 통해 정보를 가져올 수 있습니다.
+
 ### 미디어
 #### [GSharp.Modules.Media.Sound](GSharp.Modules.Media.Sound)
 소리와 관련된 프로그래밍을 제공합니다.  
