@@ -7,7 +7,7 @@ namespace GSharp.Modules.System.IO
     public class GFile : GModule
     {
         #region 사용자 함수
-        [GCommand("{object}에서 {object}로 파일 복사")]
+        [GCommand("{0}에서 {1}로 파일 복사")]
         public static void Copy(string source, string destination)
         {
             if (File.Exists(source))
@@ -16,7 +16,7 @@ namespace GSharp.Modules.System.IO
             }
         }
 
-        [GCommand("{object}에서 {object}로 파일 이동")]
+        [GCommand("{0}에서 {1}로 파일 이동")]
         public static void Move(string source, string destination)
         {
             if (File.Exists(source))
@@ -25,7 +25,7 @@ namespace GSharp.Modules.System.IO
             }
         }
 
-        [GCommand("{object}파일 삭제")]
+        [GCommand("{0}파일 삭제")]
         public static void Delete(string source)
         {
             if (File.Exists(source))
@@ -34,7 +34,7 @@ namespace GSharp.Modules.System.IO
             }
         }
 
-        [GCommand("{object}파일의 이름을 {object}로 변경")]
+        [GCommand("{0}파일의 이름을 {1}로 변경")]
         public static void Rename(string source, string name)
         {
             if (File.Exists(source))

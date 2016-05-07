@@ -35,7 +35,7 @@ namespace GSharp.Modules.System.IO
         #endregion
 
         #region 사용자 함수
-        [GCommand("{object}에서 {object}로 폴더 복사")]
+        [GCommand("{0}에서 {1}로 폴더 복사")]
         public static void Copy(string source, string destination)
         {
             if (Directory.Exists(source))
@@ -44,7 +44,7 @@ namespace GSharp.Modules.System.IO
             }
         }
 
-        [GCommand("{object}에서 {object}로 폴더 이동")]
+        [GCommand("{0}에서 {1}로 폴더 이동")]
         public static void Move(string source, string destination)
         {
             if (Directory.Exists(source))
@@ -53,7 +53,7 @@ namespace GSharp.Modules.System.IO
             }
         }
 
-        [GCommand("{object}에서 {object}폴더 생성")]
+        [GCommand("{0}에서 {1}폴더 생성")]
         public static void Create(string path, string name)
         {
             if (Directory.Exists(path))
@@ -62,7 +62,7 @@ namespace GSharp.Modules.System.IO
             }
         }
 
-        [GCommand("{object}폴더 삭제")]
+        [GCommand("{0}폴더 삭제")]
         public static void Delete(string source)
         {
             if (Directory.Exists(source))
@@ -71,7 +71,7 @@ namespace GSharp.Modules.System.IO
             }
         }
 
-        [GCommand("{object}폴더의 이름을 {object}로 변경")]
+        [GCommand("{0}폴더의 이름을 {1}로 변경")]
         public static void Rename(string source, string name)
         {
             if (Directory.Exists(source))
