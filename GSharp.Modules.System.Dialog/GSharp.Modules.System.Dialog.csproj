@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="GFolderBrowserDialog.cs" />
     <Compile Include="GOpenFileDialog.cs" />
+    <Compile Include="MessageBoxDialog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
