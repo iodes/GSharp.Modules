@@ -61,16 +61,28 @@ namespace GSharp.Modules.Media.Sound
             EngineBASS.Stop();
         }
 
-        [GCommand("템포를 {0}로 설정")]
-        public static void SetTempo(int value)
+        [GCommand("템포를 {0}% 증가")]
+        public static void SetTempoPositive(int value)
         {
-            EngineBASS.Tempo = value;
+            EngineBASS.Tempo += value;
         }
 
-        [GCommand("음정을 {0}로 설정")]
-        public static void SetPitch(int value)
+        [GCommand("템포를 {0}% 감소")]
+        public static void SetTempoNegative(int value)
         {
-            EngineBASS.Pitch = value;
+            EngineBASS.Tempo -= value;
+        }
+
+        [GCommand("음정을 {0}♯ 올림")]
+        public static void SetPitchPositive(int value)
+        {
+            EngineBASS.Pitch += value;
+        }
+
+        [GCommand("음정을 {0}♭ 내림")]
+        public static void SetPitchNegative(int value)
+        {
+            EngineBASS.Pitch -= value;
         }
 
         [GCommand("음량을 {0}%로 설정")]
