@@ -14,6 +14,6 @@
         </Grid.RowDefinitions>
 
         <ListBox Grid.Row="0" x:Name="listConsole" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5"/>
-        <TextBox Grid.Row="1" x:Name="textInput" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" KeyDown="textInput_KeyDown"/>
+        <TextBox Grid.Row="1" x:Name="textInput" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" VerticalContentAlignment="Center" KeyDown="textInput_KeyDown"/>
     </Grid>
 </UserControl>

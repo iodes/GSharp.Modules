@@ -69,8 +69,16 @@ namespace GSharp.Modules.Core.Console
                 if (e.Key == Key.Enter)
                 {
                     ReceivedText = textInput.Text;
-                    listConsole.Items.Add(ReceivedText);
+
+                    TextBlock inputBlock = new TextBlock
+                    {
+                        Text = ReceivedText,
+                        Foreground = Brushes.Green
+                    };
+
+                    listConsole.Items.Add(inputBlock);
                     textInput.Clear();
+
                     Received?.Invoke();
                 }
             });

@@ -22,13 +22,8 @@ namespace GSharp.Modules.Core.Console
         public delegate void ReceivedEventHandler();
         #endregion
 
-        [GCommand("콘솔에 {0} 출력")]
-        public static void Write(string value)
-        {
-            consoleUI.Write(value);
-        }
-
-        [GCommand("입출력 콘솔 열기")]
+        #region 사용자 함수
+        [GCommand("콘솔 창 열기")]
         public static void Show()
         {
             consoleUI = new GConsoleUI();
@@ -50,10 +45,17 @@ namespace GSharp.Modules.Core.Console
             consoleWindow.Show();
         }
 
-        [GCommand("입출력 콘솔 닫기")]
+        [GCommand("콘솔 창 닫기")]
         public static void Close()
         {
             consoleWindow?.Close();
         }
+
+        [GCommand("콘솔에 {0} 출력")]
+        public static void Write(string value)
+        {
+            consoleUI.Write(value);
+        }
+        #endregion
     }
 }
