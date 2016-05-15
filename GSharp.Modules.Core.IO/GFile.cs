@@ -2,7 +2,8 @@
 using GSharp.Extension.Abstracts;
 using GSharp.Extension.Attributes;
 
-namespace GSharp.Modules.System.IO
+
+namespace GSharp.Modules.Core.IO
 {
     public class GFile : GModule
     {

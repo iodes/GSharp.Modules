@@ -2,7 +2,7 @@
 using GSharp.Extension.Abstracts;
 using GSharp.Extension.Attributes;
 
-namespace GSharp.Modules.System.Time
+namespace GSharp.Modules.Core.Time
 {
     public class GDateTime : GModule
     {

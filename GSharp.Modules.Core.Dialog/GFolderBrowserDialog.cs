@@ -2,19 +2,19 @@
 using GSharp.Extension.Abstracts;
 using GSharp.Extension.Attributes;
 
-namespace GSharp.Modules.System.Dialog
+namespace GSharp.Modules.Core.Dialog
 {
-    public class GOpenFileDialog : GModule
+    public class GFolderBrowserDialog : GModule
     {
-        [GCommand("선택기로 선택된 파일")]
+        [GCommand("선택기로 선택된 폴더")]
         public static string ShowDialog
         {
             get
             {
-                OpenFileDialog fileDialog = new OpenFileDialog();
-                if (fileDialog.ShowDialog() == DialogResult.OK)
+                FolderBrowserDialog folderDialog = new FolderBrowserDialog();
+                if (folderDialog.ShowDialog() == DialogResult.OK)
                 {
-                    return fileDialog.FileName;
+                    return folderDialog.SelectedPath;
                 }
                 else
                 {
