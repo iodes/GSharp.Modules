@@ -6,7 +6,7 @@ namespace GSharp.Modules.Core.Dialog
 {
     public class GFolderBrowserDialog : GModule
     {
-        [GCommand("선택기로 선택된 폴더")]
+        [GCommand("선택기로 선택한 폴더")]
         public static string ShowDialog
         {
             get

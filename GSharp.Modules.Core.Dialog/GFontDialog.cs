@@ -4,17 +4,17 @@ using GSharp.Extension.Attributes;
 
 namespace GSharp.Modules.Core.Dialog
 {
-    public class GOpenFileDialog : GModule
+    public class GFontDialog : GModule
     {
-        [GCommand("열기 선택기로 선택한 파일")]
+        [GCommand("선택기로 선택한 서체")]
         public static string ShowDialog
         {
             get
             {
-                OpenFileDialog fileDialog = new OpenFileDialog();
-                if (fileDialog.ShowDialog() == DialogResult.OK)
+                FontDialog fontDialog = new FontDialog();
+                if (fontDialog.ShowDialog() == DialogResult.OK)
                 {
-                    return fileDialog.FileName;
+                    return fontDialog.Font.Name;
                 }
                 else
                 {

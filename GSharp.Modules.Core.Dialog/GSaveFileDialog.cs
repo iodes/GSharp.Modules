@@ -4,14 +4,14 @@ using GSharp.Extension.Attributes;
 
 namespace GSharp.Modules.Core.Dialog
 {
-    public class GOpenFileDialog : GModule
+    public class GSaveFileDialog : GModule
     {
-        [GCommand("열기 선택기로 선택한 파일")]
+        [GCommand("저장 선택기로 선택한 파일")]
         public static string ShowDialog
         {
             get
             {
-                OpenFileDialog fileDialog = new OpenFileDialog();
+                SaveFileDialog fileDialog = new SaveFileDialog();
                 if (fileDialog.ShowDialog() == DialogResult.OK)
                 {
                     return fileDialog.FileName;
