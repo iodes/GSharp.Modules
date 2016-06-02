@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Core.Time", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Core.Console", "GSharp.Modules.Core.Console\GSharp.Modules.Core.Console.csproj", "{88DC238E-7AE0-4037-BB1F-81263517FAB8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Control", "GSharp.Modules.Control\GSharp.Modules.Control.csproj", "{65CF3D4A-8FE0-49C0-9C98-D1C89913B5F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{88DC238E-7AE0-4037-BB1F-81263517FAB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88DC238E-7AE0-4037-BB1F-81263517FAB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88DC238E-7AE0-4037-BB1F-81263517FAB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65CF3D4A-8FE0-49C0-9C98-D1C89913B5F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65CF3D4A-8FE0-49C0-9C98-D1C89913B5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65CF3D4A-8FE0-49C0-9C98-D1C89913B5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65CF3D4A-8FE0-49C0-9C98-D1C89913B5F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
