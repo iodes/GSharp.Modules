@@ -54,6 +54,9 @@
     <Compile Include="GButton.xaml.cs">
       <DependentUpon>GButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GLabel.xaml.cs">
+      <DependentUpon>GLabel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -79,6 +82,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="GButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GLabel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

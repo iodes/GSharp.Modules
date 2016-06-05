@@ -18,12 +18,12 @@ using GSharp.Extension.Attributes;
 namespace GSharp.Modules.Control
 {
     /// <summary>
-    /// GButton.xaml에 대한 상호 작용 논리
+    /// GLabel.xaml에 대한 상호 작용 논리
     /// </summary>
-    [GView("버튼")]
-    public partial class GButton : GView
+    [GView("글자")]
+    public partial class GLabel : GView
     {
-        public GButton()
+        public GLabel()
         {
             InitializeComponent();
         }
