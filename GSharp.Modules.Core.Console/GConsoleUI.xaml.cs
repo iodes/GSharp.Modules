@@ -30,7 +30,7 @@ namespace GSharp.Modules.Core.Console
 
         #region 이벤트
         public event ReceivedEventHandler Received;
-        public delegate void ReceivedEventHandler();
+        public delegate void ReceivedEventHandler(string value);
         #endregion
 
         #region 생성자
@@ -79,7 +79,7 @@ namespace GSharp.Modules.Core.Console
                     listConsole.Items.Add(inputBlock);
                     textInput.Clear();
 
-                    Received?.Invoke();
+                    Received?.Invoke(ReceivedText);
                 }
             });
         }

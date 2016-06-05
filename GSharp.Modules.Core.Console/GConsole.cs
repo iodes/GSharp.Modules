@@ -11,15 +11,10 @@ namespace GSharp.Modules.Core.Console
         private static Window consoleWindow;
         #endregion
 
-        #region 속성
-        [GCommand("콘솔에 입력된 문자")]
-        public static string ReceivedText { get; set; }
-        #endregion
-
         #region 이벤트
         [GCommand("콘솔에 입력된 경우")]
         public static event ReceivedEventHandler Received;
-        public delegate void ReceivedEventHandler();
+        public delegate void ReceivedEventHandler([GParameter("입력된 문자")] string value);
         #endregion
 
         #region 사용자 함수
@@ -27,10 +22,9 @@ namespace GSharp.Modules.Core.Console
         public static void Show()
         {
             consoleUI = new GConsoleUI();
-            consoleUI.Received += () =>
+            consoleUI.Received += (value) =>
             {
-                ReceivedText = consoleUI.ReceivedText;
-                Received?.Invoke();
+                Received?.Invoke(value);
             };
 
             consoleWindow = new Window
@@ -54,7 +48,7 @@ namespace GSharp.Modules.Core.Console
         [GCommand("콘솔에 {0} 출력")]
         public static void Write(string value)
         {
-            consoleUI.Write(value);
+            consoleUI?.Write(value);
         }
         #endregion
     }
