@@ -23,6 +23,19 @@ namespace GSharp.Modules.Control
     [GView("버튼")]
     public partial class GButton : GView
     {
+        [GControl("내용")]
+        public string Text
+        {
+            get
+            {
+                return ButtonContent.Content.ToString();
+            }
+            set
+            {
+                ButtonContent.Content = value;
+            }
+        }
+
         public GButton()
         {
             InitializeComponent();

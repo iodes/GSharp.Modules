@@ -8,5 +8,5 @@
              mc:Ignorable="d" 
              d:DesignHeight="50" d:DesignWidth="100">
 
-    <Label Content="글자"/>
+    <Label x:Name="LabelContent" Content="글자"/>
 </gsharp:GView>

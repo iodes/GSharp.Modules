@@ -23,6 +23,19 @@ namespace GSharp.Modules.Control
     [GView("글자")]
     public partial class GLabel : GView
     {
+        [GControl("내용")]
+        public string Text
+        {
+            get
+            {
+                return LabelContent.Content.ToString();
+            }
+            set
+            {
+                LabelContent.Content = value;
+            }
+        }
+
         public GLabel()
         {
             InitializeComponent();
