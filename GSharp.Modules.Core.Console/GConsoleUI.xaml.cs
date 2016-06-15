@@ -43,45 +43,39 @@ namespace GSharp.Modules.Core.Console
         #region 사용자 함수
         public void Write(string value)
         {
-            Dispatcher.Invoke(() =>
+            listConsole.Items.Add(value);
+
+            if (VisualTreeHelper.GetChildrenCount(listConsole) > 0)
             {
-                listConsole.Items.Add(value);
-
-                if (VisualTreeHelper.GetChildrenCount(listConsole) > 0)
+                if (currentScrollViewer == null)
                 {
-                    if (currentScrollViewer == null)
-                    {
-                        Border border = (Border)VisualTreeHelper.GetChild(listConsole, 0);
-                        currentScrollViewer = (ScrollViewer)VisualTreeHelper.GetChild(border, 0);
-                    }
-
-                    currentScrollViewer?.ScrollToBottom();
+                    Border border = (Border)VisualTreeHelper.GetChild(listConsole, 0);
+                    currentScrollViewer = (ScrollViewer)VisualTreeHelper.GetChild(border, 0);
                 }
-            });
+
+                currentScrollViewer?.ScrollToBottom();
+            }
         }
         #endregion
 
         #region 텍스트 입력 이벤트
         private void textInput_KeyDown(object sender, KeyEventArgs e)
         {
-            Dispatcher.Invoke(() =>
+            if (e.Key == Key.Enter)
             {
-                if (e.Key == Key.Enter)
+                ReceivedText = textInput.Text;
+
+                TextBlock inputBlock = new TextBlock
                 {
-                    ReceivedText = textInput.Text;
+                    Text = ReceivedText,
+                    Foreground = Brushes.Green
+                };
 
-                    TextBlock inputBlock = new TextBlock
-                    {
-                        Text = ReceivedText,
-                        Foreground = Brushes.Green
-                    };
+                listConsole.Items.Add(inputBlock);
+                textInput.Clear();
 
-                    listConsole.Items.Add(inputBlock);
-                    textInput.Clear();
-
-                    Received?.Invoke(ReceivedText);
-                }
-            });
+                Received?.Invoke(ReceivedText);
+            }
         }
         #endregion
     }
