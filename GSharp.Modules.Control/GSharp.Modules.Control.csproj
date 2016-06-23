@@ -57,6 +57,9 @@
     <Compile Include="GLabel.xaml.cs">
       <DependentUpon>GLabel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GTextBox.xaml.cs">
+      <DependentUpon>GTextBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -86,6 +89,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GLabel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GTextBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
