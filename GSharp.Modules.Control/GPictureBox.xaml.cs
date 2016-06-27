@@ -24,6 +24,19 @@ namespace GSharp.Modules.Control
     public partial class GPictureBox : GView
     {
         [GControl("내용")]
+        public ImageSource Source
+        {
+            get
+            {
+                return ImageContent.Source;
+            }
+            set
+            {
+                ImageContent.Source = value;
+            }
+        }
+
+        [GControl("경로")]
         public string Path
         {
             get
