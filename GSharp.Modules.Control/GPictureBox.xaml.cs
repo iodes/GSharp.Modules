@@ -20,7 +20,7 @@ namespace GSharp.Modules.Control
     /// <summary>
     /// GPictureBox.xaml에 대한 상호 작용 논리
     /// </summary>
-    [GView("버튼")]
+    [GView("사진 상자")]
     public partial class GPictureBox : GView
     {
         [GControl("내용")]
