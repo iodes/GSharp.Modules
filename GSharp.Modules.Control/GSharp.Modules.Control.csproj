@@ -57,6 +57,9 @@
     <Compile Include="GLabel.xaml.cs">
       <DependentUpon>GLabel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GListBox.xaml.cs">
+      <DependentUpon>GListBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GPictureBox.xaml.cs">
       <DependentUpon>GPictureBox.xaml</DependentUpon>
     </Compile>
@@ -92,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GLabel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GListBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
