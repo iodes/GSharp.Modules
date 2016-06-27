@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using SoundLIB;
@@ -10,25 +11,41 @@ namespace GSharp.Modules.Media.Sound
 {
     public class GSound : GModule
     {
+        private static TagLib.File tagFile;
+
         static GSound()
         {
             EngineBASS.Registration();
             EngineBASS.Initialize(IntPtr.Zero);
         }
 
-        [GCommand("앨범 이미지")]
-        public static ImageSource AlbumCover
+        [GCommand("태그 제목 정보")]
+        public static string TagTitle
         {
             get
             {
-                if (File.Exists(EngineBASS.Path))
+                return tagFile?.Tag.Title;
+            }
+        }
+
+        [GCommand("태그 가수 정보")]
+        public static string TagSinger
+        {
+            get
+            {
+                return tagFile?.Tag.Performers.First();
+            }
+        }
+
+        [GCommand("태그 앨범 사진")]
+        public static ImageSource TagAlbumCover
+        {
+            get
+            {
+                if (tagFile.Tag.Pictures.Length >= 1)
                 {
-                    TagLib.File file = TagLib.File.Create(EngineBASS.Path);
-                    if (file.Tag.Pictures.Length >= 1)
-                    {
-                        MemoryStream stream = new MemoryStream(file.Tag.Pictures[0].Data.Data);
-                        return BitmapFrame.Create(stream);
-                    }
+                    MemoryStream stream = new MemoryStream(tagFile.Tag.Pictures[0].Data.Data);
+                    return BitmapFrame.Create(stream);
                 }
 
                 return null;
@@ -75,6 +92,9 @@ namespace GSharp.Modules.Media.Sound
         {
             EngineBASS.Path = path;
             EngineBASS.Play();
+
+            tagFile?.Dispose();
+            tagFile = TagLib.File.Create(EngineBASS.Path);
         }
 
         [GCommand("재생 정지")]
