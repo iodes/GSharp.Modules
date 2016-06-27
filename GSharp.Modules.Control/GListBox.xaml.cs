@@ -47,7 +47,7 @@ namespace GSharp.Modules.Control
             }
         }
 
-        [GControl("변경된 경우")]
+        [GControl("선택 변경")]
         public event SelectChangedEventHandler SelectChanged;
         public delegate void SelectChangedEventHandler();
 
