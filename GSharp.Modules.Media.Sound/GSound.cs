@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using SoundLIB;
 using GSharp.Extension.Abstracts;
 using GSharp.Extension.Attributes;
@@ -11,6 +14,25 @@ namespace GSharp.Modules.Media.Sound
         {
             EngineBASS.Registration();
             EngineBASS.Initialize(IntPtr.Zero);
+        }
+
+        [GCommand("앨범 이미지")]
+        public static ImageSource AlbumCover
+        {
+            get
+            {
+                if (File.Exists(EngineBASS.Path))
+                {
+                    TagLib.File file = TagLib.File.Create(EngineBASS.Path);
+                    if (file.Tag.Pictures.Length >= 1)
+                    {
+                        MemoryStream stream = new MemoryStream(file.Tag.Pictures[0].Data.Data);
+                        return BitmapFrame.Create(stream);
+                    }
+                }
+
+                return null;
+            }
         }
 
         [GCommand("재생 위치")]
