@@ -38,6 +38,15 @@ namespace GSharp.Modules.Control
         }
         private List<object> _Items;
 
+        [GControl("선택된 내용")]
+        public string SelectedItem
+        {
+            get
+            {
+                return ListBoxContent.SelectedItem.ToString();
+            }
+        }
+
         [GControl("변경된 경우")]
         public event SelectChangedEventHandler SelectChanged;
         public delegate void SelectChangedEventHandler();

@@ -1,4 +1,6 @@
 ﻿using System.IO;
+using System.Linq;
+using System.Collections.Generic;
 using GSharp.Extension.Abstracts;
 using GSharp.Extension.Attributes;
 
@@ -78,6 +80,12 @@ namespace GSharp.Modules.Core.IO
             {
                 Directory.Move(source, string.Format(@"{0}\{1}", new DirectoryInfo(source).Parent.FullName, name));
             }
+        }
+
+        [GCommand("{0}폴더에서 {1}파일 찾기")]
+        public static List<object> GetFiles(string path, string pattern)
+        {
+            return Directory.GetFiles(path, pattern, SearchOption.AllDirectories).ToList<object>();
         }
         #endregion
     }
