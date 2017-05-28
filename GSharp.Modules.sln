@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Media.Sound", "GSharp.Modules.Media.Sound\GSharp.Modules.Media.Sound.csproj", "{B47ED939-1CCC-4891-9D38-42A4DEAE8C55}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Hue", "GSharp.Modules.Hue\GSharp.Modules.Hue.csproj", "{72950760-430D-4D90-BA46-1049BEA25290}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Live2D", "GSharp.Modules.Live2D\GSharp.Modules.Live2D.csproj", "{B3FBEC3C-5186-4A6B-B3C7-902D13AB3649}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Accord", "GSharp.Modules.Accord\GSharp.Modules.Accord.csproj", "{F7BFC710-E555-4AA3-89FF-154605C60315}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{B3FBEC3C-5186-4A6B-B3C7-902D13AB3649}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3FBEC3C-5186-4A6B-B3C7-902D13AB3649}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3FBEC3C-5186-4A6B-B3C7-902D13AB3649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7BFC710-E555-4AA3-89FF-154605C60315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7BFC710-E555-4AA3-89FF-154605C60315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7BFC710-E555-4AA3-89FF-154605C60315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7BFC710-E555-4AA3-89FF-154605C60315}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
