@@ -11,8 +11,8 @@ namespace GSharp.Modules.Accord
 {
     public class GDecisionTree : GModule
     {
-        [GCommand("{0}의 {1}열에서 {2}열을 학습")]
-        public DecisionTree Learn(DataTable data, string[] inputColumns, string outputColumn)
+        [GCommand("{0}의 {1}열을 통해 {2}열을 학습")]
+        public static DecisionTree Learn(DataTable data, string[] inputColumns, string outputColumn)
         {
             var codebook = new Codification(data);
             var symbols = codebook.Apply(data);
@@ -27,7 +27,7 @@ namespace GSharp.Modules.Accord
         }
 
         [GCommand("{0}모델로 {1}값의 결과 예측")]
-        public int Decide(DecisionTree tree, double[] inputs)
+        public static int Decide(DecisionTree tree, double[] inputs)
         {
             return tree.Decide(inputs);
         }
