@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Hue", "GShar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Live2D", "GSharp.Modules.Live2D\GSharp.Modules.Live2D.csproj", "{B3FBEC3C-5186-4A6B-B3C7-902D13AB3649}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Accord", "GSharp.Modules.Accord\GSharp.Modules.Accord.csproj", "{F7BFC710-E555-4AA3-89FF-154605C60315}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Accord", "GSharp.Modules.Accord\GSharp.Modules.Accord.csproj", "{6C80E21F-26AB-4035-9EFF-7F48AB7C7BFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +59,10 @@ Global
 		{B3FBEC3C-5186-4A6B-B3C7-902D13AB3649}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3FBEC3C-5186-4A6B-B3C7-902D13AB3649}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3FBEC3C-5186-4A6B-B3C7-902D13AB3649}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F7BFC710-E555-4AA3-89FF-154605C60315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7BFC710-E555-4AA3-89FF-154605C60315}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7BFC710-E555-4AA3-89FF-154605C60315}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7BFC710-E555-4AA3-89FF-154605C60315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C80E21F-26AB-4035-9EFF-7F48AB7C7BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C80E21F-26AB-4035-9EFF-7F48AB7C7BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C80E21F-26AB-4035-9EFF-7F48AB7C7BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C80E21F-26AB-4035-9EFF-7F48AB7C7BFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
