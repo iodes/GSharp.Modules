@@ -36,6 +36,10 @@
       <HintPath>..\packages\Accord.3.5.0\lib\net45\Accord.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Accord.IO, Version=3.5.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.IO.3.5.0\lib\net45\Accord.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Accord.MachineLearning, Version=3.5.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
       <HintPath>..\packages\Accord.MachineLearning.3.5.0\lib\net45\Accord.MachineLearning.dll</HintPath>
       <Private>True</Private>
