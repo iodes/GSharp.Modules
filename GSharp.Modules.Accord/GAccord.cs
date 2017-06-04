@@ -9,13 +9,13 @@ namespace GSharp.Modules.Accord
 {
     public class GAccord : GModule
     {
-        [GCommand("{0} 자료 열기")]
+        [GCommand("{0}파일 열기")]
         public static DataTable Load(string path)
         {
             return new CsvReader(path, true).ToTable();
         }
 
-        [GCommand("{0} 의 모든 공백 정리")]
+        [GCommand("{0}의 모든 공백 정리")]
         public static void ClearNullDatas(DataTable data)
         {
             foreach (DataColumn dataColumn in data.Columns)
