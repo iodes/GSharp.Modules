@@ -12,6 +12,7 @@ namespace GSharp.Modules.Accord
         [GCommand(isTranslated: true)]
         [GTranslation("{0}파일 열기", Locale.KO_KR)]
         [GTranslation("{0}ファイルを開く", Locale.JA_JP)]
+        [GTranslation("Open file {0}", Locale.EN_US)]
         public static DataTable Load(string path)
         {
             return new CsvReader(path, true).ToTable();
@@ -20,6 +21,7 @@ namespace GSharp.Modules.Accord
         [GCommand(isTranslated: true)]
         [GTranslation("{0}의 모든 공백 정리", Locale.KO_KR)]
         [GTranslation("{0}のすべてのスペースを削除", Locale.JA_JP)]
+        [GTranslation("Clear all whitespace in {0}", Locale.EN_US)]
         public static void ClearNullDatas(DataTable data)
         {
             foreach (DataColumn dataColumn in data.Columns)
