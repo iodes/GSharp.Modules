@@ -11,7 +11,8 @@ namespace GSharp.Modules.Accord
 {
     public class GDecisionTree : GModule
     {
-        [GCommand("{0}의 {1}열을 통해 {2}열을 학습")]
+        [GCommand(isTranslated: true)]
+        [GTranslation("{0}의 {1}열을 통해 {2}열을 학습", Locale.KO_KR)]
         [GTranslation("{0}の{1}の列を介して{2}の列を学習", Locale.JA_JP)]
         public static DecisionTree Learn(DataTable data, string[] inputColumns, string outputColumn)
         {
@@ -27,7 +28,8 @@ namespace GSharp.Modules.Accord
             return c45.Learn(inputs, outputs);
         }
 
-        [GCommand("{0}모델로 {1}값의 결과 예측")]
+        [GCommand(isTranslated: true)]
+        [GTranslation("{0}모델로 {1}값의 결과 예측", Locale.KO_KR)]
         [GTranslation("{0}モデルで{1}の値の結果予測", Locale.JA_JP)]
         public static int Decide(DecisionTree tree, double[] inputs)
         {
