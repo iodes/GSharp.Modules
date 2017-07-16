@@ -1,21 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using GSharp.Extension.Abstracts;
+﻿using GSharp.Extension.Abstracts;
 using GSharp.Extension.Attributes;
 using L2DLib.Framework;
 using L2DLib.Utility;
+using System;
 
 namespace GSharp.Modules.Live2D
 {
@@ -46,7 +33,10 @@ namespace GSharp.Modules.Live2D
         }
         #endregion
 
-        [GControl("모델")]
+        [GControl(isTranslated: true)]
+        [GTranslation("모델", Locale.KO_KR)]
+        [GTranslation("モデル", Locale.JA_JP)]
+        [GTranslation("Model", Locale.EN_US)]
         public string Path
         {
             get
@@ -67,7 +57,10 @@ namespace GSharp.Modules.Live2D
         }
         private string _Path;
 
-        [GControl("모션")]
+        [GControl(isTranslated: true)]
+        [GTranslation("모션", Locale.KO_KR)]
+        [GTranslation("モーション", Locale.JA_JP)]
+        [GTranslation("Motion", Locale.EN_US)]
         public GL2DMotion Motion
         {
             get
@@ -108,7 +101,10 @@ namespace GSharp.Modules.Live2D
         }
         private GL2DMotion _Motion;
 
-        [GCommand("모션 얼거형")]
+        [GCommand(isTranslated: true)]
+        [GTranslation("모션 얼거형", Locale.KO_KR)]
+        [GTranslation("モーション列挙", Locale.JA_JP)]
+        [GTranslation("Motion Enum", Locale.EN_US)]
         public enum GL2DMotion
         {
             [GField("대기 모션")]
