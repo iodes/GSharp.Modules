@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GSharp.Extension">
-      <HintPath>..\..\..\..\Desktop\GSharp.Modules-0c5ab28005f96b5d8e14db1e2919424bf51493af\DLL\GSharp.Extension.dll</HintPath>
+      <HintPath>..\DLL\GSharp.Extension.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

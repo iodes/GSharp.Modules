@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using System.Threading;
-using GSharp.Extension.Abstracts;
+﻿using GSharp.Extension.Abstracts;
 using GSharp.Extension.Attributes;
+using System;
+using System.Diagnostics;
 
 namespace GSharp.Moudles.Cpu
 {
