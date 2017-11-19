@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Registry", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Web", "GSharp.Modules.Web\GSharp.Modules.Web.csproj", "{6FB01564-FE16-4938-915C-0301B9DAF3BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.YouTube", "GSharp.Modules.YouTube\GSharp.Modules.YouTube.csproj", "{F2F8529B-D3ED-4DBF-85CE-A685FD62811F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{6FB01564-FE16-4938-915C-0301B9DAF3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FB01564-FE16-4938-915C-0301B9DAF3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FB01564-FE16-4938-915C-0301B9DAF3BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2F8529B-D3ED-4DBF-85CE-A685FD62811F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2F8529B-D3ED-4DBF-85CE-A685FD62811F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2F8529B-D3ED-4DBF-85CE-A685FD62811F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2F8529B-D3ED-4DBF-85CE-A685FD62811F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
