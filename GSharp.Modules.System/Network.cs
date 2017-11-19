@@ -1,9 +1,10 @@
-﻿using GSharp.Extension.Attributes;
+﻿using GSharp.Extension.Abstracts;
+using GSharp.Extension.Attributes;
 using System.Net;
 
 namespace GSharp.Modules.System
 {
-    public class Network
+    public class Network : GModule
     {
         [GCommand("IPv4 주소")]
         public static string ShowIPv4()

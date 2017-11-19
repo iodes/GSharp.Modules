@@ -1,4 +1,5 @@
-﻿using GSharp.Extension.Attributes;
+﻿using GSharp.Extension.Abstracts;
+using GSharp.Extension.Attributes;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -6,7 +7,7 @@ using System.Windows;
 
 namespace GSharp.Modules.Web
 {
-    public class Connect
+    public class Connect : GModule
     {
         [GCommand("{0} 웹 브라우저 접속")]
         public static void ConnectWeb(string url)

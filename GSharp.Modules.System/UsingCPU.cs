@@ -1,10 +1,11 @@
-﻿using GSharp.Extension.Attributes;
+﻿using GSharp.Extension.Abstracts;
+using GSharp.Extension.Attributes;
 using System;
 using System.Diagnostics;
 
 namespace GSharp.Modules.System
 {
-    public class UsingCPU
+    public class UsingCPU : GModule
     {
         [GCommand("CPU 이용률")]
         public static string GetUsingCpu()
