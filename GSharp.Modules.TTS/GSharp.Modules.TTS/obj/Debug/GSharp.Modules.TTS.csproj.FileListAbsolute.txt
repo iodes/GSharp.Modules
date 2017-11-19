@@ -1,0 +1,7 @@
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.TTS\GSharp.Modules.TTS\bin\Debug\GSharp.Modules.TTS.dll
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.TTS\GSharp.Modules.TTS\bin\Debug\GSharp.Modules.TTS.pdb
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.TTS\GSharp.Modules.TTS\bin\Debug\GSharp.Extension.dll
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.TTS\GSharp.Modules.TTS\bin\Debug\GSharp.Extension.pdb
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.TTS\GSharp.Modules.TTS\obj\Debug\GSharp.Modules.TTS.csprojResolveAssemblyReference.cache
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.TTS\GSharp.Modules.TTS\obj\Debug\GSharp.Modules.TTS.dll
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.TTS\GSharp.Modules.TTS\obj\Debug\GSharp.Modules.TTS.pdb
