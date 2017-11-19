@@ -1,9 +1,8 @@
-﻿using GSharp.Extension.Abstracts;
-using GSharp.Extension.Attributes;
+﻿using GSharp.Extension.Attributes;
 
-namespace GSharp.Moudles.RegDelete
+namespace GSharp.Modules.Registry
 {
-    public class RegDelete : GModule
+    public class RegDelete
     {
         [GCommand("{0}레지스트리 하위키 제거")]
         public static void RegRemove(string RegPath)
