@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.YouTube", "G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Computer", "GSharp.Modules.Computer\GSharp.Modules.Computer.csproj", "{A530E645-E396-4330-BDA8-8B76DB492C86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Email", "GSharp.Modules.Email\GSharp.Modules.Email.csproj", "{EAC99036-64B8-42D9-9FB1-32F06014DBA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{A530E645-E396-4330-BDA8-8B76DB492C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A530E645-E396-4330-BDA8-8B76DB492C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A530E645-E396-4330-BDA8-8B76DB492C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC99036-64B8-42D9-9FB1-32F06014DBA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC99036-64B8-42D9-9FB1-32F06014DBA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC99036-64B8-42D9-9FB1-32F06014DBA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC99036-64B8-42D9-9FB1-32F06014DBA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
