@@ -60,6 +60,38 @@ namespace GSharp.Modules.Core.Time
                 return DateTime.Now.Second;
             }
         }
+
+        [GCommand("현재 요일")]
+        public static string Date()
+        {
+            return getDate();
+        }
+
+        private static string getDate()
+        {
+            string DayofWeek = DateTime.Today.DayOfWeek.ToString();
+
+            switch (DayofWeek)
+            {
+                case "Monday":
+                    return "월요일";
+                case "Tuesday":
+                    return "화요일";
+                case "Wednesday":
+                    return "수요일";
+                case "Thursday":
+                    return "목요일";
+                case "Friday":
+                    return "금요일";
+                case "Saturday":
+                    return "토요일";
+                case "Sunday":
+                    return "일요일";
+                default:
+                    return "Error in getDay()";
+            }
+        }
+
         #endregion
     }
 }
