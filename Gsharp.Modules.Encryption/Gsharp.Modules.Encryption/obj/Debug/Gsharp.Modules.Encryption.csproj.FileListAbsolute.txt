@@ -1,0 +1,7 @@
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\Gsharp.Modules.Encryption\Gsharp.Modules.Encryption\bin\Debug\Gsharp.Modules.Encryption.dll
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\Gsharp.Modules.Encryption\Gsharp.Modules.Encryption\bin\Debug\Gsharp.Modules.Encryption.pdb
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\Gsharp.Modules.Encryption\Gsharp.Modules.Encryption\bin\Debug\GSharp.Extension.dll
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\Gsharp.Modules.Encryption\Gsharp.Modules.Encryption\bin\Debug\GSharp.Extension.pdb
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\Gsharp.Modules.Encryption\Gsharp.Modules.Encryption\obj\Debug\Gsharp.Modules.Encryption.csprojResolveAssemblyReference.cache
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\Gsharp.Modules.Encryption\Gsharp.Modules.Encryption\obj\Debug\Gsharp.Modules.Encryption.dll
+C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\Gsharp.Modules.Encryption\Gsharp.Modules.Encryption\obj\Debug\Gsharp.Modules.Encryption.pdb
