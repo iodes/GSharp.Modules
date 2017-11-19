@@ -8,8 +8,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-
-namespace GSharp.Modules.Youtube
+namespace GSharp.Modules.YouTube
 {
     public class YouTubeAPI : GModule
     {
@@ -19,7 +18,7 @@ namespace GSharp.Modules.Youtube
         private static HttpWebResponse response;
         private static string result;
 
-        [GCommand("검색한 결과 리스트")]
+        [GCommand("검색한 결과 목록")]
         public static List<object> Title
         {
             get
@@ -67,8 +66,8 @@ namespace GSharp.Modules.Youtube
             request.Method = "GET";
             using (response = (HttpWebResponse)request.GetResponse())
             {
-                Stream stReadData = response.GetResponseStream();
-                StreamReader srReadData = new StreamReader(stReadData, Encoding.UTF8);
+                var stReadData = response.GetResponseStream();
+                var srReadData = new StreamReader(stReadData, Encoding.UTF8);
                 result = srReadData.ReadToEnd();
             }
 
@@ -80,10 +79,12 @@ namespace GSharp.Modules.Youtube
                 videoIdList.Add(json["id"]["videoId"].Value<string>());
 
             }
+
             _videoId = videoIdList;
             _videoType = videoTypeList;
             _title = titleList;
         }
+
         [GCommand("{0} 유투브로 보기")]
         public static void showVideo(string selected)
         {
@@ -91,13 +92,10 @@ namespace GSharp.Modules.Youtube
             string sub_url = VideoId[index];
             string type = VideoType[index];
 
-            // string url = "https://youtube.com/watch?v="+sub_url;
             if (type.Equals("youtube#video"))
             {
-
                 string url = "https://youtube.com/embed/" + sub_url;
                 Process.Start(url);
-
             }
         }
     }

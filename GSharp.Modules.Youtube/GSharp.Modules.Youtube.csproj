@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{865D5CC6-59B3-4F70-B879-D457A6BB3D86}</ProjectGuid>
+    <ProjectGuid>{F2F8529B-D3ED-4DBF-85CE-A685FD62811F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GSharp.Modules.Youtube</RootNamespace>
-    <AssemblyName>GSharp.Modules.Youtube</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>GSharp.Modules.YouTube</RootNamespace>
+    <AssemblyName>GSharp.Modules.YouTube</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GSharp.Extension">
-      <HintPath>..\..\Visual Studio 2015\Projects\GSharp.Modules.Youtube\GSharp.Modules.Youtube\bin\Debug\GSharp.Extension.dll</HintPath>
+      <HintPath>..\DLL\GSharp.Extension.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -47,8 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="YouTubeAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YouTubeAPI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
