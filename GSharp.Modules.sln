@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Email", "GSh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Chatting", "GSharp.Modules.Chatting\GSharp.Modules.Chatting.csproj", "{069A48BD-3A6E-4E45-AECC-1D76AA1FCC35}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Security", "GSharp.Modules.Security\GSharp.Modules.Security.csproj", "{12A2822B-6A95-4C09-A694-D9C1DEC3C464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharp.Modules.Speech", "GSharp.Modules.Speech\GSharp.Modules.Speech.csproj", "{EA73231B-B66C-4F22-89A8-E566E32641C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,14 @@ Global
 		{069A48BD-3A6E-4E45-AECC-1D76AA1FCC35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{069A48BD-3A6E-4E45-AECC-1D76AA1FCC35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{069A48BD-3A6E-4E45-AECC-1D76AA1FCC35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12A2822B-6A95-4C09-A694-D9C1DEC3C464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A2822B-6A95-4C09-A694-D9C1DEC3C464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A2822B-6A95-4C09-A694-D9C1DEC3C464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A2822B-6A95-4C09-A694-D9C1DEC3C464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA73231B-B66C-4F22-89A8-E566E32641C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA73231B-B66C-4F22-89A8-E566E32641C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA73231B-B66C-4F22-89A8-E566E32641C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA73231B-B66C-4F22-89A8-E566E32641C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
