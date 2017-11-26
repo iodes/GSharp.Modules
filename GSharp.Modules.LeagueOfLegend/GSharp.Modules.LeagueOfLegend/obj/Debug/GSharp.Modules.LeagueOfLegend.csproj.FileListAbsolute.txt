@@ -1,7 +1,0 @@
-C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.LeagueOfLegend\GSharp.Modules.LeagueOfLegend\bin\Debug\GSharp.Modules.LeagueOfLegend.dll
-C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.LeagueOfLegend\GSharp.Modules.LeagueOfLegend\bin\Debug\GSharp.Modules.LeagueOfLegend.pdb
-C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.LeagueOfLegend\GSharp.Modules.LeagueOfLegend\bin\Debug\GSharp.Extension.dll
-C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.LeagueOfLegend\GSharp.Modules.LeagueOfLegend\bin\Debug\GSharp.Extension.pdb
-C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.LeagueOfLegend\GSharp.Modules.LeagueOfLegend\obj\Debug\GSharp.Modules.LeagueOfLegend.csprojResolveAssemblyReference.cache
-C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.LeagueOfLegend\GSharp.Modules.LeagueOfLegend\obj\Debug\GSharp.Modules.LeagueOfLegend.dll
-C:\Users\hubeen\hbome\Contributhon2017\GSharp.Modules\GSharp.Modules.LeagueOfLegend\GSharp.Modules.LeagueOfLegend\obj\Debug\GSharp.Modules.LeagueOfLegend.pdb

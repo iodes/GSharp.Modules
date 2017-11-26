@@ -1,7 +1,0 @@
-\\mac\home\documents\visual studio 2017\Projects\Gsharp.Modules.SystemInfo\Gsharp.Modules.SystemInfo\bin\Debug\Gsharp.Modules.SystemInfo.dll
-\\mac\home\documents\visual studio 2017\Projects\Gsharp.Modules.SystemInfo\Gsharp.Modules.SystemInfo\bin\Debug\Gsharp.Modules.SystemInfo.pdb
-\\mac\home\documents\visual studio 2017\Projects\Gsharp.Modules.SystemInfo\Gsharp.Modules.SystemInfo\bin\Debug\GSharp.Extension.dll
-\\mac\home\documents\visual studio 2017\Projects\Gsharp.Modules.SystemInfo\Gsharp.Modules.SystemInfo\bin\Debug\GSharp.Extension.pdb
-\\mac\home\documents\visual studio 2017\Projects\Gsharp.Modules.SystemInfo\Gsharp.Modules.SystemInfo\obj\Debug\Gsharp.Modules.SystemInfo.csprojResolveAssemblyReference.cache
-\\mac\home\documents\visual studio 2017\Projects\Gsharp.Modules.SystemInfo\Gsharp.Modules.SystemInfo\obj\Debug\Gsharp.Modules.SystemInfo.dll
-\\mac\home\documents\visual studio 2017\Projects\Gsharp.Modules.SystemInfo\Gsharp.Modules.SystemInfo\obj\Debug\Gsharp.Modules.SystemInfo.pdb
