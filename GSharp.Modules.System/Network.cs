@@ -1,5 +1,6 @@
 ﻿using GSharp.Extension.Abstracts;
 using GSharp.Extension.Attributes;
+using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 
@@ -7,13 +8,12 @@ namespace GSharp.Modules.System
 {
     public class Network : GModule
     {
-        [GCommand("IPv4 주소")]
-        public static string ShowIPv4()
+        [GCommand("IP 주소")]
+        public static string ShowIP()
         {
-            var host = Dns.GetHostByName(Dns.GetHostName());
-            var ipv4 = host.AddressList[0].ToString();
+            var host = Dns.GetHostEntry(Dns.GetHostName());
 
-            return ipv4;
+            return host.AddressList.FirstOrDefault().ToString();
         }
 
         [GCommand("네트워크 연결 여부")]
