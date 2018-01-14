@@ -1,4 +1,7 @@
 # GSharp.Modules
+[日本語説明はこちらへ](README.JP.md)  
+[Click here for English Description](README.EN.md)
+
 GSharp에서 사용할 수 있는 기본 확장 모듈입니다.  
 
 ## 소개
