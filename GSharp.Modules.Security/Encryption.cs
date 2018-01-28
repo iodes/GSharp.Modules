@@ -9,80 +9,31 @@ namespace GSharp.Modules.Security
 {
     public class Encryption : GModule
     {
-        public static string _base64_Encoding_str;
-        public static string _base64_Decoding_str;
-        public static string _md5_Encoding_str;
-        public static string _des_Encoding_str;
-        public static string _des_Decoding_str;
-
-
-        [GCommand("Base64 Encoding 결과")]
-        public static string _Base64_Encoding
-        {
-            get
-            {
-                return _base64_Encoding_str;
-            }
-        }
-        [GCommand("Base64 Decoding 결과")]
-        public static string _Base64_Decoding
-        {
-            get
-            {
-                return _base64_Decoding_str;
-            }
-        }
-        [GCommand("MD5 Encoding 결과")]
-        public static string _MD5_Encoding
-        {
-            get
-            {
-                return _md5_Encoding_str;
-            }
-        }
-        [GCommand("DES Encoding 결과")]
-        public static string _DES_Encoding
-        {
-            get
-            {
-                return _des_Encoding_str;
-            }
-        }
-        [GCommand("DES Decoding 결과")]
-        public static string _DES_Decoding
-        {
-            get
-            {
-                return _des_Decoding_str;
-            }
-        }
-
-
-        [GCommand("Base64 Encoding({0})")]
-        public static void Base64_Encoding(string text)
+        [GCommand("{0} BASE64 인코딩")]
+        public static string Base64_Encoding(string text)
         {
             byte[] bt = Encoding.Unicode.GetBytes(text);
-            string ret = Convert.ToBase64String(bt);
-            _base64_Encoding_str = ret;
+            return Convert.ToBase64String(bt);
         }
-        [GCommand("Base64 Decoding({0})")]
-        public static void Base64_Decoding(string text)
+
+        [GCommand("{0} BASE64 디코딩")]
+        public static string Base64_Decoding(string text)
         {
             byte[] bt = Convert.FromBase64String(text);
-            string ret = Encoding.Unicode.GetString(bt);
-            _base64_Decoding_str = ret;
+            return Encoding.Unicode.GetString(bt);
         }
-        [GCommand("MD5 Encoding({0})")]
-        public static void MD5_Encoding(string text)
+
+        [GCommand("{0} MD5 인코딩")]
+        public static string MD5_Encoding(string text)
         {
             byte[] bt = Convert.FromBase64String(text);
             MD5 md5_txt = new MD5CryptoServiceProvider();
             byte[] md5 = md5_txt.ComputeHash(bt);
-            _md5_Encoding_str = Convert.ToBase64String(md5);
+            return Convert.ToBase64String(md5);
         }
 
-        [GCommand("DES Encoding({0}) Key(Length<9) {1}")]
-        public static void DES_Encoding(string text, string key)
+        [GCommand("{0} DES 인코딩 ({1} KEY (Length < 9))")]
+        public static string DES_Encoding(string text, string key)
         {
             byte[] bt_key;
             if (key.Length != 8 || key.Length == 0)
@@ -106,11 +57,11 @@ namespace GSharp.Modules.Security
             cryStream.Write(data, 0, data.Length);
             cryStream.FlushFinalBlock();
 
-            _des_Encoding_str = Convert.ToBase64String(ms.ToArray());
+            return Convert.ToBase64String(ms.ToArray());
         }
 
-        [GCommand("DES Decoding({0}) Key(Length<9) {1}")]
-        public static void DES_Decoding(string text, string key)
+        [GCommand("{0} DES 디코딩 ({1} KEY (Length < 9))")]
+        public static string DES_Decoding(string text, string key)
         {
             byte[] bt_key;
             if (key.Length != 8 || key.Length == 0)
@@ -134,7 +85,7 @@ namespace GSharp.Modules.Security
             cryStream.Write(data, 0, data.Length);
             cryStream.FlushFinalBlock();
 
-            _des_Decoding_str = Encoding.UTF8.GetString(ms.GetBuffer());
+            return Encoding.UTF8.GetString(ms.GetBuffer());
         }
     }
 }
