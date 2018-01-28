@@ -1,10 +1,12 @@
 ﻿using GSharp.Extension.Abstracts;
 using GSharp.Extension.Attributes;
+using GSharp.Modules.YouTube.Models;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text;
 
@@ -12,85 +14,49 @@ namespace GSharp.Modules.YouTube
 {
     public class YouTubeAPI : GModule
     {
-        private static string url = "https://www.googleapis.com/youtube/v3/search";
-        private static string sub_url = "key=AIzaSyCWXp5SQT1e_IqshiK2D3GHRGpIPfsFQ8M&part=snippet&maxResults=5&" + "fields=items(id(kind, videoId),snippet(title, publishedAt))&order=viewCount&q=";
-        private static HttpWebRequest request;
-        private static HttpWebResponse response;
-        private static string result;
+        #region 상수
+        private const string url = "https://www.googleapis.com/youtube/v3/search";
+        private const string sub_url = "key=AIzaSyCWXp5SQT1e_IqshiK2D3GHRGpIPfsFQ8M&part=snippet&maxResults=5&" + "fields=items(id(kind, videoId),snippet(title, publishedAt))&order=viewCount&q=";
+        #endregion
 
-        [GCommand("검색한 결과 목록")]
-        public static List<object> Title
-        {
-            get
-            {
-                return _title;
-            }
-        }
-        private static List<object> _title = null;
-
-        public static List<string> VideoId
-        {
-            get
-            {
-                return _videoId;
-            }
-            set
-            {
-                _videoId = value;
-            }
-        }
-        private static List<string> _videoId = null;
-
-        public static List<string> VideoType
-        {
-            get
-            {
-                return _videoType;
-            }
-            set
-            {
-                _videoType = value;
-            }
-        }
-        private static List<string> _videoType = null;
+        #region 변수
+        public static List<YouTubeVideo> lastResult;
+        #endregion
 
         [GCommand("유투브에서 {0} 검색")]
-        public static void searchVideo(string word)
+        public static List<object> SearchVideo(string word)
         {
-            var titleList = new List<object>();
-            var videoTypeList = new List<string>();
-            var videoIdList = new List<string>();
+            lastResult = new List<YouTubeVideo>();
 
-            Uri uri = new Uri(url + "?" + sub_url + word);
-            request = (HttpWebRequest)WebRequest.Create(uri);
+            var request = WebRequest.Create(new Uri($"{url}?{sub_url}{word}"));
             request.Method = "GET";
-            using (response = (HttpWebResponse)request.GetResponse())
+
+            using (var response = request.GetResponse())
             {
                 var stReadData = response.GetResponseStream();
                 var srReadData = new StreamReader(stReadData, Encoding.UTF8);
-                result = srReadData.ReadToEnd();
+
+                var jsonObject = JObject.Parse(srReadData.ReadToEnd());
+                foreach (JObject json in jsonObject["items"])
+                {
+                    lastResult.Add(new YouTubeVideo
+                    {
+                        ID = json["id"]["videoId"].Value<string>(),
+                        Type = json["id"]["kind"].Value<string>(),
+                        Title = json["snippet"]["title"].Value<string>()
+                    });
+                }
             }
 
-            var jsonObject = JObject.Parse(result.ToString());
-            foreach (JObject json in jsonObject["items"])
-            {
-                titleList.Add(json["snippet"]["title"].Value<string>());
-                videoTypeList.Add(json["id"]["kind"].Value<string>());
-                videoIdList.Add(json["id"]["videoId"].Value<string>());
-
-            }
-
-            _videoId = videoIdList;
-            _videoType = videoTypeList;
-            _title = titleList;
+            return lastResult.Select(x => x.Title).ToList<object>();
         }
 
         [GCommand("{0} 유투브로 보기")]
-        public static void showVideo(string selected)
+        public static void ShowVideo(string selected)
         {
-            int index = Title.IndexOf(selected);
-            string sub_url = VideoId[index];
-            string type = VideoType[index];
+            int index = lastResult.Select(x => x.Title).ToList().IndexOf(selected);
+            string sub_url = lastResult[index].ID;
+            string type = lastResult[index].Type;
 
             if (type.Equals("youtube#video"))
             {
