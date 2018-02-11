@@ -6,5 +6,6 @@
 *.opendb
 */bin
 */obj
+/.vs
 /Debug
 /packages
